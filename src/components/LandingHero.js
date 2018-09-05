@@ -33,6 +33,9 @@ LandingHero.Heading = styled.h2`
   margin: 1rem 0;
   padding: 0;
   text-transform: uppercase;
+  @media (max-height: 400px) {
+    font-size: 3.75rem;
+  }
 `;
 
 LandingHero.SubHeading = styled.p`
@@ -43,8 +46,8 @@ LandingHero.SubHeading = styled.p`
 
 LandingHero.Container = styled.div`
   width: 600px;
-  height: 400px;
   font-family: ${props => props.theme.fonts.primary};
+  padding: 0 1rem;
 `;
 
 export default LandingHero;
