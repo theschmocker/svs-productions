@@ -20,7 +20,6 @@ injectGlobal(
 import 'typeface-roboto';
 import 'typeface-roboto-slab';
 
-
 import Navigation from '../components/Navigation';
 
 const Layout = ({ children, data }) => (
@@ -32,11 +31,11 @@ const Layout = ({ children, data }) => (
           { name: 'description', content: 'Sample' },
           { name: 'keywords', content: 'sample, something' },
         ]}
-      />
+      >
+        <html lang="en" />
+      </Helmet>
       <Navigation />
-      <div>
-        {children()}
-      </div>
+      <div>{children()}</div>
     </Fragment>
   </ThemeProvider>
 );
