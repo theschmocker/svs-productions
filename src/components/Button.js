@@ -7,7 +7,10 @@ const Button = styled.button`
   cursor: pointer;
   height: 2.5rem;
   width: 10rem;
-  color: ${props => props.primary ? 'rgba(255,255,255, 0.75)' : lighten(0.3, props.theme.colors.accent)};
+  color: ${props =>
+    props.primary
+      ? 'rgba(255,255,255, 0.75)'
+      : lighten(0.3, props.theme.colors.accent)};
   background: ${props =>
     props.primary ? props.theme.colors.accent : 'transparent'};
   border: 2px solid ${props => props.theme.colors.accent};
@@ -18,7 +21,9 @@ const Button = styled.button`
 
   &:hover {
     background: ${props =>
-      props.primary ? lighten(0.05, props.theme.colors.accent) : 'rgba(255,255,255,0.05)'};
+      props.primary
+        ? lighten(0.05, props.theme.colors.accent)
+        : 'rgba(255,255,255,0.05)'};
     border: 2px solid ${props => lighten(0.05, props.theme.colors.accent)};
   }
 `;
