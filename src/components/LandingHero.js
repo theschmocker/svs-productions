@@ -21,7 +21,7 @@ const LandingHero = styled.header`
     right: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, black, #7462BC 150%);
+    background: linear-gradient(135deg, black, #7462bc 150%);
     opacity: 0.5;
     filter: blur(1px);
   }
@@ -36,18 +36,33 @@ LandingHero.Heading = styled.h2`
   @media (max-height: 400px) {
     font-size: 3.75rem;
   }
+  ${props => props.theme.media.phone`
+  font-size: 3.75rem;;
+  `};
 `;
 
 LandingHero.SubHeading = styled.p`
   font-family: ${props => props.theme.fonts.secondary};
   padding-left: 5px;
   margin: 1rem 0;
+  ${props => props.theme.media.phone`
+    margin-bottom: 3rem;
+  `};
 `;
 
 LandingHero.Container = styled.div`
   width: 600px;
   font-family: ${props => props.theme.fonts.primary};
   padding: 0 1rem;
+
+  ${props => props.theme.media.phone`
+  padding: 0 2rem;
+  button {
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 1rem;
+  }
+  `};
 `;
 
 export default LandingHero;
