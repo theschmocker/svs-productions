@@ -17,7 +17,7 @@ const IndexPage = () => (
     </HeaderVideo>
     <Container>
       <Heading>We do visual</Heading>
-      <SubHeading>Welcome to your new Gatsby site.</SubHeading>
+      <SubHeading>Need quality visuals for your business or event? We have you covered.</SubHeading>
       <Button primary>Hire us</Button>
       <Button>See work</Button>
     </Container>
