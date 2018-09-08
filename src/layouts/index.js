@@ -31,6 +31,13 @@ const Layout = ({ children, data }) => (
           { name: 'description', content: 'Sample' },
           { name: 'keywords', content: 'sample, something' },
         ]}
+        link={[
+          {
+            rel: 'shortcut icon',
+            type: 'image/png',
+            href: '/favicon.ico',
+          },
+        ]}
       >
         <html lang="en" />
       </Helmet>
