@@ -7,8 +7,7 @@ const HeaderVideo = styled.video.attrs({
   loop: true,
   muted: true,
 })`
-  opacity: 1;
-  filter: blur(5px) grayscale(100);
+  opacity: 0.75;
   position: fixed;
   bottom: 0;
   object-fit: cover;
