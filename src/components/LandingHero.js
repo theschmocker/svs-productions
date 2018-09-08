@@ -44,6 +44,7 @@ LandingHero.SubHeading = styled.p`
   font-family: ${props => props.theme.fonts.secondary};
   padding-left: 5px;
   margin: 1rem 0;
+  margin-bottom: 2rem;
   ${props => props.theme.media.phone`
     margin-bottom: 3rem;
   `};
