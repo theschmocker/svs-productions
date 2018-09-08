@@ -27,7 +27,7 @@ export default {
     accent: '#493B81',
   },
   fonts: {
-    primary: 'Roboto',
-    secondary: 'Roboto Slab',
+    primary: `"Roboto", sans-serif`,
+    secondary: `"Roboto Slab", sans-serif`,
   }
 };
