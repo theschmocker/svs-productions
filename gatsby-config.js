@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'SvS Productions',
   },
   plugins: [
     'gatsby-plugin-react-next',
