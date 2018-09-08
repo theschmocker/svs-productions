@@ -8,7 +8,7 @@ import LandingHero, {
 } from '../components/LandingHero';
 import Button from '../components/Button';
 import HeaderVideo from '../components/HeaderVideo';
-import bg from '../../../../../Downloads/essential_usb.mp4';
+import bg from '../../static/svs2.mp4';
 
 const IndexPage = () => (
   <LandingHero>
