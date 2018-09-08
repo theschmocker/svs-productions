@@ -19,7 +19,6 @@ const HeaderVideo = styled.video.attrs({
   left: 50%;
   transform: translateX(-50%);
   ${props => props.theme.media.phone`
-    display: none;
   `}
 `;
 
