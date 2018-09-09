@@ -20,7 +20,7 @@ const LandingHero = styled.header`
     bottom: 0;
     right: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh + 100px);
     background: linear-gradient(135deg, black, #7462bc 150%);
     opacity: 0.75;
   }
