@@ -4,28 +4,35 @@ import { lighten } from 'polished';
 
 import SlantedContainer from './SlantedContainer';
 import { H2, H3, H4, OfferingHeading } from './ContentHeadings';
+import Separator from './Separator';
 
 const ServicesContainer = styled(SlantedContainer)`
   font-family: ${props => props.theme.fonts.secondary};
 `;
 
 const Inner = styled.div`
-  padding: 3rem 20rem;
+  padding: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
   line-height: 1.5;
 
   & > p {
     color: ${props => lighten(0.2, props.theme.colors.accent)};
-    text-align: center;
     font-size: 1.5rem;
   }
 `;
 
 const OfferingsContainer = styled.ul`
+  font-size: 1.1rem;
   padding-left: 0;
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
+
+  ${props => props.theme.media.phone`
+    grid-template-columns: 1fr;
+  `}
 `;
 
 const Offering = styled.li``;
@@ -33,7 +40,7 @@ const Offering = styled.li``;
 const Services = () => (
   <ServicesContainer>
     <Inner>
-      <a name="services" />
+      <a id="services" />
       <H2>Services</H2>
       <H3>Video Production</H3>
       <p>
@@ -87,6 +94,7 @@ const Services = () => (
           </p>
         </Offering>
       </OfferingsContainer>
+      <Separator />
       <H3>Photography</H3>
       <p />
       <p>
@@ -139,6 +147,7 @@ const Services = () => (
           </p>
         </Offering>
       </OfferingsContainer>
+      <Separator />
     </Inner>
   </ServicesContainer>
 );
