@@ -8,6 +8,11 @@ const Separator = styled.div`
   background ${props => lighten(0.5, props.theme.colors.accent)};
   border-radius: 3px;
   margin: 6rem auto;
+
+  ${props => props.theme.media.phone`
+    margin: 2rem auto;
+    height: 2px;
+  `}
 `;
 
 export default Separator;

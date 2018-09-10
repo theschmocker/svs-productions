@@ -19,7 +19,15 @@ const Inner = styled.div`
   & > p {
     color: ${props => lighten(0.2, props.theme.colors.accent)};
     font-size: 1.5rem;
+    ${props => props.theme.media.phone`
+      font-size: 1.25rem;
+      margin: 0;
+    `}
   }
+
+  ${props => props.theme.media.phone`
+    padding: 3rem 1rem;
+  `}
 `;
 
 const OfferingsContainer = styled.ul`
@@ -32,6 +40,8 @@ const OfferingsContainer = styled.ul`
 
   ${props => props.theme.media.phone`
     grid-template-columns: 1fr;
+    grid-gap: 0;
+    font-size: 1rem;
   `}
 `;
 

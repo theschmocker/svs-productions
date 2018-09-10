@@ -36,7 +36,7 @@ LandingHero.Heading = styled.h2`
     font-size: 3.75rem;
   }
   ${props => props.theme.media.phone`
-  font-size: 3.75rem;;
+    font-size: 3rem;;
   `};
 `;
 

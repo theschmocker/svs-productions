@@ -20,6 +20,15 @@ const SlantedContainer = styled.section`
     height: 100px;
     width: 100%;
   }
+
+  ${props => props.theme.media.phone`
+    margin-top: 50px;
+    
+    &:before {
+      top: -50px;
+      height: 50px;
+    }
+  `}
 `;
 
 export default SlantedContainer;
