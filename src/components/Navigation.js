@@ -14,6 +14,7 @@ class Header extends Component {
   state = {
     menuIsOpen: false,
     fadeTimeout: true,
+    pageIsScrolled: true,
   };
 
   toggleMenu = () => {
@@ -60,7 +61,7 @@ class Header extends Component {
         <NavLink
           menuIsOpen={this.state.menuIsOpen}
           onClick={this.closeMenu}
-          to=""
+          to="/#services"
         >
           Services
         </NavLink>
@@ -88,6 +89,7 @@ class Header extends Component {
         <MenuButton
           menuIsOpen={this.state.menuIsOpen}
           onClick={this.toggleMenu}
+          pageIsScrolled={this.state.pageIsScrolled}
         >
           Menu
         </MenuButton>
@@ -95,7 +97,6 @@ class Header extends Component {
     );
   }
 }
-
 
 const StyledNav = styled.nav`
   position: fixed;
@@ -120,7 +121,6 @@ const StyledNav = styled.nav`
     visibility: visible;
     flex-direction: column;
     background: ${props.theme.colors.bg};
-    position: absolute;
     top: 0;
     left: 0;
     height: 100vh;
