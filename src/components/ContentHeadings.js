@@ -1,25 +1,39 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { lighten } from 'polished';
+import { lighten, darken } from 'polished';
 
 const baseHeadingStyles = css`
   font-family: ${props => props.theme.fonts.primary};
   text-transform: uppercase;
-  text-align: center;
 `;
 
 export const H2 = styled.h2`
+  display: inline-block;
+  position: relative;
   ${baseHeadingStyles}
   font-size: 4rem;
+  color: ${props => darken(0.1, props.theme.colors.accent)}
+
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    width: 80%;
+    background: ${props => darken(0.1, props.theme.colors.accent)};
+  }
 `;
 
 export const H3 = styled.h3`
-  ${baseHeadingStyles}
+  ${baseHeadingStyles};
   font-size: 2.5rem;
+  color: ${props => props.theme.colors.accent};
 `;
 
 export const H4 = styled.h4`
-  ${baseHeadingStyles}
+  ${baseHeadingStyles};
   font-size: 1.5rem;
 `;
 
