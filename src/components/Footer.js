@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
-import { darken } from 'polished';
+import { lighten, darken } from 'polished';
 
 import {
   faYoutube,
@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Footer = () => (
   <StyledFooter>
     <FooterLinks>
-      <FooterHeading>SvS Productions</FooterHeading>
+      <FooterHeading><Link to="/">SvS Productions</Link></FooterHeading>
       <FooterNav>
         <Link to="/work">Work</Link>
         <Link to="/about">About</Link>
@@ -66,6 +66,10 @@ const FooterNav = styled.nav`
     text-decoration: none;
     color: ${props => props.theme.colors.fg};
     opacity: 0.85;
+
+    &:hover {
+      color: ${props => lighten(0.1, props.theme.colors.fg)};
+    }
   }
 `;
 
@@ -73,6 +77,14 @@ const FooterHeading = styled.h1`
   font-size: 2.5rem;
   font-family: ${props => props.theme.fonts.primary};
   font-weight: lighter;
+
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.colors.fg};
+    &:hover {
+      color: ${props => lighten(0.1, props.theme.colors.fg)};
+    }
+  }
 `;
 
 const FooterSubheading = styled.h2`
@@ -104,6 +116,11 @@ const SocialIcons = styled.div`
     &:visited {
       color: ${props => props.theme.colors.fg}
     }
+
+    &:hover {
+      color: ${props => lighten(0.1, props.theme.colors.fg)};
+    }
+
     padding: 5px;
     height: 2rem;
     width: 2rem;
