@@ -90,14 +90,17 @@ const Copyright = styled.section`
 `;
 
 const SocialIcons = styled.div`
+  font-size: 1.5rem;
   margin: 1rem auto;
   list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  & > * {
+  a {
     color: ${props => props.theme.colors.fg}
-    font-size: 1.5rem;
+    &:visited {
+      color: ${props => props.theme.colors.fg}
+    }
     padding: 5px;
     height: 1.5rem;
     width: 1.5rem;
