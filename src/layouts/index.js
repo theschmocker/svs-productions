@@ -21,6 +21,7 @@ import 'typeface-roboto';
 import 'typeface-roboto-slab';
 
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const Layout = ({ children, data }) => (
   <ThemeProvider theme={theme}>
@@ -43,6 +44,7 @@ const Layout = ({ children, data }) => (
       </Helmet>
       <Navigation />
       <div>{children()}</div>
+      <Footer />
     </Fragment>
   </ThemeProvider>
 );
