@@ -40,7 +40,7 @@ const Footer = () => (
     </FooterLinks>
     <Copyright>
       <span>&copy; {new Date().getFullYear()} SvS Productions. </span> 
-      <span>Designed &amp; Developed by Jacob Schmocker</span>
+      <span>Built by Jacob Schmocker</span>
     </Copyright>
   </StyledFooter>
 );
@@ -99,6 +99,7 @@ const Copyright = styled.section`
   text-align: center;
   opacity: 0.7;
   grid-column: span 2;
+  padding: 0 1rem;
   span {
     display: block;
   }
