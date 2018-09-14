@@ -5,7 +5,7 @@ const SlantedContainer = styled.section`
   position: relative;
   width: 100%;
   margin-top: 100px;
-  background: #eee;
+  background: #fbfbfb;
   color: ${props => props.theme.colors.bg};
   box-sizing: border-box;
 
@@ -14,7 +14,7 @@ const SlantedContainer = styled.section`
     position: absolute;
     top: -100px;
     content: '';
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23${'eee'}%3B' /%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23${'fbfbfb'}%3B' /%3E%3C/svg%3E");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 100px;
