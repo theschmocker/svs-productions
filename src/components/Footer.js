@@ -23,16 +23,16 @@ const Footer = () => (
         <Link to="/#services">Services</Link>
       </FooterNav>
       <SocialIcons>
-        <a href="#">
+        <a href="#" aria-label="SvS Productions on YouTube">
           <FontAwesomeIcon icon={faYoutube} />
         </a>
-        <a href="#">
+        <a href="#" aria-label="SvS Productions on Instagram">
           <FontAwesomeIcon icon={faInstagram} />
         </a>
-        <a href="#">
+        <a href="#" aria-label="SvS Productions on Twitter">
           <FontAwesomeIcon icon={faTwitter} />
         </a>
-        <a href="#">
+        <a href="#" aria-label="SvS Productions on Facebook">
           <FontAwesomeIcon icon={faFacebook} />
         </a>
       </SocialIcons>
