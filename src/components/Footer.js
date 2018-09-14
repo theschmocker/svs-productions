@@ -1,13 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
+import { darken } from 'polished';
+
+import {
+  faYoutube,
+  faFacebook,
+  faTwitter,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => (
   <StyledFooter>
-    <FooterHeading>
-      <h1>SvS<em> Productions </em></h1>
-    </FooterHeading>
     <FooterLinks>
+      <FooterHeading>SvS Productions</FooterHeading>
       <FooterNav>
         <Link to="/work">Work</Link>
         <Link to="/about">About</Link>
@@ -15,49 +23,33 @@ const Footer = () => (
         <Link to="/#services">Services</Link>
       </FooterNav>
       <SocialIcons>
-        <a href="#">🔥</a>
-        <a href="#">🔥</a>
-        <a href="#">🔥</a>
-        <a href="#">🔥</a>
+        <a href="#">
+          <FontAwesomeIcon icon={faYoutube} />
+        </a>
+        <a href="#">
+          <FontAwesomeIcon icon={faInstagram} />
+        </a>
+        <a href="#">
+          <FontAwesomeIcon icon={faTwitter} />
+        </a>
+        <a href="#">
+          <FontAwesomeIcon icon={faFacebook} />
+        </a>
       </SocialIcons>
       <FooterSubheading>We do visual</FooterSubheading>
     </FooterLinks>
-    <Copyright>&copy; 2018 SvS Productions. Designed &amp; Developed by Jacob Schmocker</Copyright>
+    <Copyright>
+      &copy; {new Date().getFullYear()} SvS Productions. Designed &amp;
+      Developed by Jacob Schmocker
+    </Copyright>
   </StyledFooter>
-)
-
-const FooterHeading = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-left: 5rem; 
-  h1 {
-    margin: 0;
-    font-family: ${props => props.theme.fonts.primary};
-    font-weight: lighter;
-    font-size: 12rem;
-    line-height: 1;
-  }
-
-  em {
-    display: block;
-    font-style: normal;
-    font-size: 0.2em;
-    font-family: ${props => props.theme.fonts.primary};
-    letter-spacing: 2.75px;
-    font-weight: normal;
-    text-transform: uppercase;
-  }
-`
+);
 
 const FooterLinks = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-right: 5rem; 
-  padding-top: 1rem;
 `;
 
 const FooterNav = styled.nav`
@@ -68,16 +60,24 @@ const FooterNav = styled.nav`
   a {
     text-transform: uppercase;
     font-size: 1.25rem;
+    font-weight: normal;
     padding: 0.25rem;
     display: block;
     text-decoration: none;
     color: ${props => props.theme.colors.fg};
+    opacity: 0.85;
   }
+`;
+
+const FooterHeading = styled.h1`
+  font-size: 2.5rem;
+  font-family: ${props => props.theme.fonts.primary};
+  font-weight: lighter;
 `;
 
 const FooterSubheading = styled.h2`
   margin: 0;
-  font-size: 1.75rem;
+  font-size: 1rem;
   font-weight: normal;
   text-transform: uppercase;
   opacity: 0.8;
@@ -95,23 +95,29 @@ const SocialIcons = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-    & > * {
-      font-size: 1.5rem;
-      padding: 5px;
-      height: 1.5rem;
-      width: 1.5rem;
-      text-align: center;
-      line-height: 1.5rem;
-    }
+  & > * {
+    color: ${props => props.theme.colors.fg}
+    font-size: 1.5rem;
+    padding: 5px;
+    height: 1.5rem;
+    width: 1.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+  }
 `;
 
 const StyledFooter = styled.footer`
   font-family: ${props => props.theme.fonts.primary};
-  background: ${props => props.theme.colors.accent};
+  background: linear-gradient(
+    135deg,
+    ${props => darken(0.2, props.theme.colors.accent)},
+    #7462bc 150%
+  );
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 100%;
   grid-template-rows: auto 2rem;
+  justify-content: center;
   min-height: 500px;
 `;
 
