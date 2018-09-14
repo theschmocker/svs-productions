@@ -39,8 +39,8 @@ const Footer = () => (
       <FooterSubheading>We do visual</FooterSubheading>
     </FooterLinks>
     <Copyright>
-      &copy; {new Date().getFullYear()} SvS Productions. Designed &amp;
-      Developed by Jacob Schmocker
+      <span>&copy; {new Date().getFullYear()} SvS Productions. </span> 
+      <span>Designed &amp; Developed by Jacob Schmocker</span>
     </Copyright>
   </StyledFooter>
 );
@@ -85,8 +85,11 @@ const FooterSubheading = styled.h2`
 
 const Copyright = styled.section`
   text-align: center;
-  opacity: 0.75;
+  opacity: 0.7;
   grid-column: span 2;
+  span {
+    display: block;
+  }
 `;
 
 const SocialIcons = styled.div`
@@ -102,10 +105,10 @@ const SocialIcons = styled.div`
       color: ${props => props.theme.colors.fg}
     }
     padding: 5px;
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 2rem;
+    width: 2rem;
     text-align: center;
-    line-height: 1.5rem;
+    line-height: 2rem;
   }
 `;
 
@@ -119,7 +122,7 @@ const StyledFooter = styled.footer`
   margin: 0;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto 2rem;
+  grid-template-rows: auto minmax(2rem, 4rem);
   justify-content: center;
   min-height: 500px;
 `;
