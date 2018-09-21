@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import { ThemeProvider, injectGlobal, css } from 'styled-components';
@@ -24,11 +23,11 @@ import Navigation from '../components/Navigation';
 import SiteHeaderLink from '../components/SiteHeaderLink';
 import Footer from '../components/Footer';
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <Fragment>
       <Helmet
-        title={data.site.siteMetadata.title}
+        title={'SvS Productions'}
         meta={[
           { name: 'description', content: 'Sample' },
           { name: 'keywords', content: 'sample, something' },
@@ -49,24 +48,10 @@ const Layout = ({ children, data }) => (
       >
         <h1>SvS</h1>
       </SiteHeaderLink>
-      <div>{children()}</div>
+      <div>{children}</div>
       <Footer />
     </Fragment>
   </ThemeProvider>
 );
 
-Layout.propTypes = {
-  children: PropTypes.func,
-};
-
 export default Layout;
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;
