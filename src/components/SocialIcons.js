@@ -37,9 +37,9 @@ const SocialIconsContainer = styled.div`
   justify-content: center;
   align-items: center;
   a {
-    color: ${props => props.theme.colors.fg}
+    color: ${props => props.theme.colors.fg};
     &:visited {
-      color: ${props => props.theme.colors.fg}
+      color: ${props => props.theme.colors.fg};
     }
 
     &:hover {
