@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
 
 import NavLink from './NavLink';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 
 const SiteHeaderLink = styled(Link)`
   position: absolute;
