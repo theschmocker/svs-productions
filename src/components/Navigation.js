@@ -1,47 +1,34 @@
 import React, { Component, Fragment } from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import styled, { css } from 'styled-components';
 
 import NavLink from './NavLink';
 import MenuButton from './MenuButton';
 
-class Header extends Component {
+class Navigation extends Component {
   constructor(props) {
     super(props);
   }
 
   state = {
     menuIsOpen: false,
-    fadeTimeout: true,
-    pageIsScrolled: true,
   };
 
   toggleMenu = () => {
     if (this.state.menuIsOpen) {
-      this.fadeMenu();
       return this.setState({ menuIsOpen: false });
     }
 
-    this.setState({ menuIsOpen: true, fadeTimeout: false });
+    this.setState({ menuIsOpen: true });
   };
 
   closeMenu = () => {
     this.setState({ menuIsOpen: false });
-    this.fadeMenu();
-  };
-
-  fadeMenu = () => {
-    setTimeout(() => {
-      this.setState({ fadeTimeout: true });
-    }, 200);
   };
 
   render() {
     return (
-      <StyledNav
-        menuIsOpen={this.state.menuIsOpen}
-        fadeTimeout={this.state.fadeTimeout}
-      >
+      <StyledNav menuIsOpen={this.state.menuIsOpen}>
         <NavLink
           menuIsOpen={this.state.menuIsOpen}
           onClick={this.closeMenu}
@@ -91,7 +78,7 @@ class Header extends Component {
 }
 
 const StyledNav = styled.nav`
-  position: fixed;
+  position: absolute;
   top: 0;
   min-height: 100px;
   width: 100%;
@@ -101,25 +88,24 @@ const StyledNav = styled.nav`
   font-family: ${props => props.theme.fonts.primary};
   color: ${props => props.theme.colors.fg};
   text-decoration: none;
-  transition: background 0.2s ease;
   z-index: 100;
+  visibility: hidden;
+  min-height: 100vh;
 
-  ${props => props.theme.media.phone`
-    visibility: ${props => (props.fadeTimeout ? 'hidden' : 'visible')};
-    min-height: 100vh;
-  `} ${props =>
+  ${props =>
     props.menuIsOpen &&
-    props.theme.media.phone`
-    visibility: visible;
-    flex-direction: column;
-    background: ${props.theme.colors.bg};
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    opacity: 1;
-  `};
+    css`
+      position: fixed;
+      visibility: visible;
+      flex-direction: column;
+      background: ${props.theme.colors.bg};
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      margin: 0;
+      opacity: 1;
+    `};
 `;
 
-export default Header;
+export default Navigation;

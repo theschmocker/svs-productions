@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-import Link from 'gatsby-link';
+import styled, { css } from 'styled-components';
+import { Link } from 'gatsby';
 
 const NavLink = styled(Link)`
   position: relative;
@@ -11,23 +11,18 @@ const NavLink = styled(Link)`
   text-decoration: none;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.fg};
-  &.home-link {
-    display: none
-      ${({ theme }) => theme.media.phone`
-      display: inline;
-    `};
-  }
 
   ${props =>
     props.menuIsOpen
-      ? props.theme.media.phone`
-  visibility: visible;
-    font-size: 2rem;
-    padding: 0.75rem 0;
-  `
-      : props.theme.media.phone`
-    visibility: hidden;
-  `} &:after {
+      ? css`
+          visibility: visible;
+          font-size: 2rem;
+          padding: 0.75rem 0;
+        `
+      : css`
+          visibility: hidden;
+        `};
+  &:after {
     content: '';
     position: absolute;
     bottom: 0;
