@@ -6,7 +6,6 @@ const MenuButton = styled.button`
   position: absolute;
   top: 1rem;
   right: 1rem;
-  display: none;
   height: 3rem;
   width: 2.5rem;
   color: transparent;
@@ -34,9 +33,8 @@ const MenuButton = styled.button`
     left: 0;
   }
 
-  ${props => props.theme.media.phone`
-  display: block;
-  ${props.menuIsOpen &&
+  ${props =>
+    props.menuIsOpen &&
     css`
       &:before {
         transform: rotate(45deg) translateY(0.5rem);
@@ -46,7 +44,6 @@ const MenuButton = styled.button`
         transform: rotate(-45deg) translateY(-0.5rem);
       }
     `}
-`}
 `;
 
 export default MenuButton;

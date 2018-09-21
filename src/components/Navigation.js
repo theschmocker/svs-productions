@@ -3,7 +3,6 @@ import Link from 'gatsby-link';
 import styled, { css } from 'styled-components';
 
 import NavLink from './NavLink';
-import SiteHeaderLink from './SiteHeaderLink';
 import MenuButton from './MenuButton';
 
 class Header extends Component {
@@ -65,13 +64,6 @@ class Header extends Component {
         >
           Services
         </NavLink>
-        <SiteHeaderLink
-          menuIsOpen={this.state.menuIsOpen}
-          onClick={this.closeMenu}
-          to="/"
-        >
-          <h1>SvS</h1>
-        </SiteHeaderLink>
         <NavLink
           menuIsOpen={this.state.menuIsOpen}
           onClick={this.closeMenu}

@@ -2,11 +2,18 @@ import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
 
 import NavLink from './NavLink';
+import Link from 'gatsby-link';
 
-const SiteHeaderLink = styled(NavLink)`
-  padding-top: 1rem;
+const SiteHeaderLink = styled(Link)`
+  position: absolute;
+  z-index: 99;
+  top: 1.5rem;
+  left: 1.5rem;
   text-transform: none;
+  color: ${({ theme }) => theme.colors.fg};
+  text-decoration: none;
   h1 {
+    font-family: ${props => props.theme.fonts.primary};
     font-size: 3rem;
     margin: 0;
     font-weight: lighter;
@@ -18,16 +25,6 @@ const SiteHeaderLink = styled(NavLink)`
       display: none;
     }
   }
-
-  ${props => props.theme.media.phone`
-    visibility: visible;
-    font-size: 1.5rem;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-  `};
 `;
 
 export default SiteHeaderLink;

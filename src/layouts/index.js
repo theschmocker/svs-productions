@@ -21,6 +21,7 @@ import 'typeface-roboto';
 import 'typeface-roboto-slab';
 
 import Navigation from '../components/Navigation';
+import SiteHeaderLink from '../components/SiteHeaderLink';
 import Footer from '../components/Footer';
 
 const Layout = ({ children, data }) => (
@@ -43,6 +44,11 @@ const Layout = ({ children, data }) => (
         <html lang="en" />
       </Helmet>
       <Navigation />
+      <SiteHeaderLink
+        to="/"
+      >
+        <h1>SvS</h1>
+      </SiteHeaderLink>
       <div>{children()}</div>
       <Footer />
     </Fragment>
