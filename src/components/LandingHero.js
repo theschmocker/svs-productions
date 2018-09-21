@@ -26,7 +26,7 @@ const LandingHero = styled.header`
   }
 `;
 
-LandingHero.Heading = styled.h2`
+export const Heading = styled.h2`
   font-size: 5rem;
   font-weight: normal;
   margin: 1rem 0;
@@ -40,7 +40,7 @@ LandingHero.Heading = styled.h2`
   `};
 `;
 
-LandingHero.SubHeading = styled.p`
+export const SubHeading = styled.p`
   font-family: ${props => props.theme.fonts.secondary};
   padding-left: 5px;
   margin: 1rem 0;
@@ -50,7 +50,7 @@ LandingHero.SubHeading = styled.p`
   `};
 `;
 
-LandingHero.Container = styled.div`
+export const Container = styled.div`
   width: 600px;
   font-family: ${props => props.theme.fonts.primary};
   padding: 0 1rem;
