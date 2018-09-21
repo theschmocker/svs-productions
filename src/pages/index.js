@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
+
+import Layout from '../layouts/index';
 
 import LandingHero, {
   Container,
@@ -13,7 +15,7 @@ import Services from '../components/Services';
 import bg from '../../static/svs2.mp4';
 
 const IndexPage = () => (
-  <Fragment>
+  <Layout>
     <LandingHero>
       <HeaderVideo>
         <source src={bg} type="video/mp4" />
@@ -28,7 +30,7 @@ const IndexPage = () => (
       </Container>
     </LandingHero>
     <Services />
-  </Fragment>
+  </Layout>
 );
 
 export default IndexPage;
