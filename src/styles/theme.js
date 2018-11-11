@@ -24,7 +24,8 @@ export default {
     bg: '#222',
     landingGradient:
       'linear-gradient(145.57deg, #000000 26.56%, #7462BC 93.88%);',
-    accent: '#493B81',
+    //accent: '#493B81',
+    accent: '#555',
   },
   fonts: {
     primary: `"Roboto", sans-serif`,

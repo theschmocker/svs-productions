@@ -35,9 +35,14 @@ const StyledFooter = styled.footer`
   font-family: ${props => props.theme.fonts.primary};
   background: linear-gradient(
     135deg,
-    ${props => darken(0.2, props.theme.colors.accent)},
-    #7462bc 150%
+    #111,
+    #333 150%
   );
+  //background: linear-gradient(
+  //  135deg,
+  //  ${props => darken(0.2, props.theme.colors.accent)},
+  //  #7462bc 150%
+  //);
   margin: 0;
   display: grid;
   grid-template-columns: 100%;
