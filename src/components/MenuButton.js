@@ -6,7 +6,7 @@ const MenuButton = styled.button`
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  height: 3rem;
+  height: 50px;
   width: 2.5rem;
   color: transparent;
   background: none;
@@ -15,21 +15,23 @@ const MenuButton = styled.button`
   outline: none !important;
 
   &:before, &:after {
+    display: block;
     position: absolute;
     content: "";
     width: 100%;
     height 2px;
     background: ${props => props.theme.colors.fg};
     transition: transform 0.2s ease;
+    transform-origin: center;
   }
 
   &:before {
-    top: 1rem;
+    top: 17px;
     left: 0;
   }
 
   &:after {
-    bottom: 1rem;
+    bottom: 17px;
     left: 0;
   }
 
@@ -37,10 +39,12 @@ const MenuButton = styled.button`
     props.menuIsOpen &&
     css`
       &:before {
+        top: 18px;
         transform: rotate(45deg) translateY(0.5rem);
       }
 
       &:after {
+        bottom: 18px;
         transform: rotate(-45deg) translateY(-0.5rem);
       }
     `}
